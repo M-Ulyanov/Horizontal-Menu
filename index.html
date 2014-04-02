@@ -5,41 +5,8 @@
 <title>Простое горизонтальное меню</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="js/script.js" type="text/javascript"></script>
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
-<script type="text/javascript">
-$(function(){
-	var li = $('ul#index-menu > li');
-	$(li).hover(function(){
-		clearTimeout($.data(this,'timer'));
-		if($(this).children('ul.submenu').length != 0){
-			var sub = $(this).children('.submenu');
-			$(sub).stop(true, true).slideDown('300');
-			$(sub).animate({
-				'top' : '60px',
-			},300)
-		}
-		else{
-			console.log('No Sub-menu')
-		}
-	},
-	function(){
-		$.data(this,'timer', setTimeout($.proxy(function() {
-	    var sub = $(this).children('.submenu');
-		$(sub).slideUp('100');
-		$(sub).animate({
-			'top' : '80px',
-		},0)
-	    }, this), 100));
-	});
-
-
-	$('<div class="over">').css({
-		'opacity' : '0.7'
-	})
-	.appendTo('.submenu');
-
-});
-</script>
 </head>
 <body>
 <div id="wrapp">
