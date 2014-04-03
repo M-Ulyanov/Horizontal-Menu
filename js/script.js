@@ -6,8 +6,12 @@ $(function(){
 			var sub = $(this).children('.submenu');
 			$(sub).stop(true, true).slideDown('300');
 			$(sub).animate({
-				'top' : '60px',
-			},300)
+				'top' : '67px',
+			},300);
+			$(this).find('.arrow').stop(true, true).animate({
+				'opacity' : 'show',
+				'top' : '-18px',
+			}, 800);
 		}
 		else{
 			console.log('No Sub-menu')
@@ -18,9 +22,13 @@ $(function(){
 	    var sub = $(this).children('.submenu');
 		$(sub).slideUp('100');
 		$(sub).animate({
-			'top' : '80px',
-		},0)
-	    }, this), 100));
+			'top' : '87px',
+		},0);
+		$(this).find('.arrow').stop(true, true).animate({
+			
+			'top' : '-12px',
+		}, 100);
+	    }, this), 800));
 	});
 
 
@@ -28,5 +36,7 @@ $(function(){
 		'opacity' : '0.7'
 	})
 	.appendTo('.submenu');
+
+	$('<span class="arrow">').appendTo('.submenu');
 
 });

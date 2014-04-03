@@ -96,7 +96,7 @@ ul#index-menu > li .submenu{
 	border: 4px solid rgb(170, 9, 80);
 	border-top-width: 8px;
 	min-width: 200px;
-	top: 80px;
+	top: 87px;
 	left:0;
 	display: none;
 	-moz-border-radius: 5px;
@@ -137,7 +137,7 @@ ul#index-menu > li .submenu{
 	height: 100%;
 	width: 100%;
 	display: block;
-	color:#000;
+	color: #000;
 }
 .submenu > li:hover a{
 	color: rgb(170, 9, 80);
@@ -148,4 +148,15 @@ ul#index-menu > li .submenu{
 	position : absolute;
 	top : 0;
 	background : #FFF;
+}
+
+.arrow{
+	background: url(../img/arrow-sub.png) no-repeat;
+	display: block;
+	width: 20px;
+	height: 12px;
+	position: absolute;
+	top: -12px;
+	left: 10px;
+
 }
