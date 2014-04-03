@@ -11,7 +11,7 @@ $(function(){
 			$(this).find('.arrow').stop(true, true).animate({
 				'opacity' : 'show',
 				'top' : '-18px',
-			}, 800);
+			}, 700);
 		}
 		else{
 			console.log('No Sub-menu')
@@ -25,10 +25,10 @@ $(function(){
 			'top' : '87px',
 		},0);
 		$(this).find('.arrow').stop(true, true).animate({
-			
+			'opacity' : 'hide',	
 			'top' : '-12px',
-		}, 100);
-	    }, this), 800));
+		}, 600);
+	    }, this), 200));
 	});
 
 
